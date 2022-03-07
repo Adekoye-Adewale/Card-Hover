@@ -164,17 +164,41 @@ background-image: url(./UIUX.jpg);
 }
 
 .content>* {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(1rem);
     transition: transform var(--d) var(--e), opacity var(--d) var(--e);
 }
 
 .card:hover {
-    align-items: center;
+    align-items: center;   
 }
 
+.card:nth-child(1):hover:before {
+    background-image: url(./Cloud.jpg);
+    }
+
+    .card:nth-child(2):hover:before {
+        background-image: url(./cybersecurity.jpg);
+        }
+        
+        .card:nth-child(3):hover:before {
+        background-image: url(./hosting.jpg);
+        }
+        
+        .card:nth-child(4):hover:before {
+        background-image: url(./networking.jpeg);
+        }
+        
+        .card:nth-child(5):hover:before {
+        background-image: url(./shield.jpg);
+        }
+        
+        .card:nth-child(6):hover:before {
+        background-image: url(./UIUX.jpg);
+        }
+
 .card:hover:before {
-    background: rgb(148, 148, 148);
+    background: rgba(44, 2, 2, 0.986);
 }
 
 .card:hover:after {
@@ -182,6 +206,7 @@ background-image: url(./UIUX.jpg);
 }
 
 .card:hover .content {
+    
     transform: translateY(0);
 }
 
@@ -189,4 +214,5 @@ background-image: url(./UIUX.jpg);
     opacity: 1;
     transform: translateY(0);
     transition-delay: calc(var(--d) / 8);
+    
 }
