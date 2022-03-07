@@ -1,10 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 
 :root {
     --d: 700ms;
     --e: cubic-bezier(0.19, 1, 0.22, 1);
-    --font-sans: "Rubik", sans-serif;
-    --font-serif: "Cardo", serif;
+    --font-sans: "VelaSans-GX", VelaSans-GX;
+    --font-serif: "NotoSerif-Bold", serif;
+}
+
+@font-face {
+    font-family: hFont;
+    src: url(./NotoSerif-Bold.ttf);
+}
+
+@font-face {
+    font-family: pFont;
+    src: url(./VelaSans-GX.ttf);
+ }
 }
 
 * {
@@ -14,7 +24,8 @@
 html,
 body {
     height: 100%;
-    background-color: aqua;
+    background-color: rgb(189, 88, 180);
+    font-family: pFont;
 }
 
 body {
@@ -22,12 +33,29 @@ body {
     place-items: center;
 }
 
+h1 {
+    font-family: hFont;
+    font-weight: bolder;
+    font-size: 30px;
+    color: rgb(248, 195, 244);
+    z-index: 5;
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
 .page-content {
     display: grid;
     grid-gap: 1rem;
     padding: 1rem;
     margin: 0 auto;
-    font-family: var(--font-sans);
+    font-family: pFont;
 }
 
 @media (min-width: 600px) {
@@ -125,16 +153,16 @@ background-image: url(./UIUX.jpg);
 }
 
 .title {
+    font-family: hFont;
     font-size: 25px;
-    font-weight: bold;
+    font-weight: 900;
     line-height: 0.5px;
-    color: rgb(189, 88, 180);
+    color: rgb(212, 126, 205)
 }
 
 .des {
-    font-family: var(--font-serif);
-    font-size: 16px;
-    font-style: italic;
+    font-family: pFont;
+    font-size: 18px;
     line-height: 1.35;
 }
 
@@ -142,8 +170,9 @@ background-image: url(./UIUX.jpg);
     cursor: pointer;
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
-    font-size: 14px;
-    font-weight: bold;
+    font-family: pFont;
+    font-size: 16px;
+    font-weight: 900;
     letter-spacing: 0.025rem;
     text-transform: uppercase;
     color: #111;
@@ -174,27 +203,33 @@ background-image: url(./UIUX.jpg);
 }
 
 .card:nth-child(1):hover:before {
-    background-image: url(./Cloud.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(95, 30, 95, 0.70)), url(./Cloud.jpg);
+    background-size: cover;
     }
 
-    .card:nth-child(2):hover:before {
-        background-image: url(./cybersecurity.jpg);
+.card:nth-child(2):hover:before {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(95, 30, 95, 0.70)), url(./cybersecurity.jpg);
+    background-size: cover;
         }
         
-        .card:nth-child(3):hover:before {
-        background-image: url(./hosting.jpg);
+.card:nth-child(3):hover:before {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(95, 30, 95, 0.70)), url(./hosting.jpg);
+    background-size: cover;
         }
         
-        .card:nth-child(4):hover:before {
-        background-image: url(./networking.jpeg);
+.card:nth-child(4):hover:before {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(95, 30, 95, 0.70)), url(./networking.jpeg);
+    background-size: cover;
         }
         
-        .card:nth-child(5):hover:before {
-        background-image: url(./shield.jpg);
+.card:nth-child(5):hover:before {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(95, 30, 95, 0.70)), url(./shield.jpg);
+    background-size: cover;
         }
         
-        .card:nth-child(6):hover:before {
-        background-image: url(./UIUX.jpg);
+.card:nth-child(6):hover:before {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(95, 30, 95, 0.70)), url(./UIUX.jpg);
+    background-size: cover;
         }
 
 .card:hover:before {
